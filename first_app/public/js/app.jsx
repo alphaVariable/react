@@ -23,7 +23,7 @@ class ProductList extends React.Component {
 class Product extends React.Component {
   render() {
     return (
-      <div className='item'>
+      <div className='item' id={'product-' + this.props.id}>
         <div className='image'>
           <img src={this.props.productImageUrl} />
         </div>
