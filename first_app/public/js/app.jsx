@@ -1,3 +1,4 @@
+
 class ProductList extends React.Component {
   render() {
     const productComponents = Seed.products.map((product) => (
@@ -28,8 +29,16 @@ class Product extends React.Component {
           <img src={this.props.productImageUrl} />
         </div>
         <div className='middle aligned content'>
+          <div className="header">
+            <a>
+              <i className="large caret up icon"></i>
+            </a>
+            {this.props.votes}
+          </div>
           <div className='description'>
-            <a>{this.props.title}</a>
+            <a href={this.props.url}>
+              {this.props.title}
+            </a>
             <p>{this.props.description}</p>
           </div>
           <div className='extra'>
